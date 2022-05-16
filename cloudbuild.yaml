@@ -7,10 +7,10 @@ steps:
   - |
       echo "**************** Terraform init ****************"
       terraform init
-	    echo "**************** Terraform validate ****************"
-	    terraform validate
-	    echo "**************** Terraform plan ****************"
-	    terraform plan
-	    echo "**************** Terraform apply ****************"
-	    terraform apply -auto-approve
-	    echo "**************** creating resources ****************"
+      echo "**************** Terraform validate ****************"
+      terraform validate
+      echo "**************** Terraform plan ****************"
+      terraform plan
+      echo "**************** Terraform apply ****************"
+      terraform apply -auto-approve
+      echo "**************** creating resources ****************"
