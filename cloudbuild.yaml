@@ -1,6 +1,11 @@
-# In this directory, run the following command to build this builder.
-# $ gcloud builds submit . --config=cloudbuild.yaml --substitutions _BUCKET='<bucket name>'
 steps:
-- name: 'gcr.io/cloud-builders/gcloud'
-  args: ['terraform init', 'terraform validate', 'terraform plan', 'terraform apply -auto-approve']
- 
+- id: 'tf plan'
+  name: 'hashicorp/terraform:1.0.0'
+  entrypoint: 'sh'
+  args:
+  - '-c'
+  - |
+     terraform init
+	   terraform validate
+	   terraform plan
+	   terraform apply -auto-approve
