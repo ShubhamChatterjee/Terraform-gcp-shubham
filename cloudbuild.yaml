@@ -1,19 +1,19 @@
 # In this directory, run the following command to build this builder.
 # $ gcloud builds submit . --config=cloudbuild.yaml --substitutions _BUCKET='<bucket name>'
 steps:
-- name: 'gcr.io/${PROJECT_ID}/terraform'
+- name: 'gcr.io/phonic-realm-344805/quickstart-image@sha256:de892de56d0da365dc62d29f7fa04799d5ca0605d86f2a3331095584e9670d67'
   args: ['init']
   env:
     - "TF_VAR_project-name=${PROJECT_ID}"
-- name: 'gcr.io/${PROJECT_ID}/terraform'
+- name: 'gcr.io/phonic-realm-344805/quickstart-image@sha256:de892de56d0da365dc62d29f7fa04799d5ca0605d86f2a3331095584e9670d67'
   args: ['plan']
   env:
     - "TF_VAR_project-name=${PROJECT_ID}"
-- name: 'gcr.io/${PROJECT_ID}/terraform'
+- name: 'gcr.io/phonic-realm-344805/quickstart-image@sha256:de892de56d0da365dc62d29f7fa04799d5ca0605d86f2a3331095584e9670d67'
   args: ['apply', '-auto-approve']
   env:
     - "TF_VAR_project-name=${PROJECT_ID}"
-- name: 'gcr.io/${PROJECT_ID}/terraform'
+- name: 'gcr.io/phonic-realm-344805/quickstart-image@sha256:de892de56d0da365dc62d29f7fa04799d5ca0605d86f2a3331095584e9670d67'
   args: ['destroy', '-auto-approve']
   env:
     - "TF_VAR_project-name=${PROJECT_ID}"
