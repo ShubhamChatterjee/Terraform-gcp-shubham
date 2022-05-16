@@ -1,7 +1,7 @@
 # In this directory, run the following command to build this builder.
 # $ gcloud builds submit . --config=cloudbuild.yaml --substitutions _BUCKET='<bucket name>'
 steps:
-- name: 'Terraform Starts'
+- name: 'gcr.io/shubham-cloud-build-gcr-16052022'
   args: ['terraform init', 'terraform validate', 'terraform plan', 'terraform apply -auto-approve']
   env:
     - "TF_VAR_project-name=${PROJECT_ID}"
