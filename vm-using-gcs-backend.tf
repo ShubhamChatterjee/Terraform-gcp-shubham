@@ -1,5 +1,5 @@
 resource "google_compute_instance" "first-vm-tf-gcs-backend" {
-    name = "first-vm-tf-gcs-backend"
+    name = "first-vm-terraform-gcs-backend"
     machine_type = "f1-micro"
     zone = "us-central1-a"
     boot_disk {
